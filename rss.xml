@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Carl B portfolio]]></title><description><![CDATA[Personal web for Carl Barrdahl]]></description><link>https://carlbarrdahl.github.io/web</link><generator>RSS for Node</generator><lastBuildDate>Wed, 02 Jan 2019 22:18:26 GMT</lastBuildDate><item><title><![CDATA[Building a portfolio part 1]]></title><description><![CDATA[Setup GatsbyJS Modify  Deploy to GitHub pages Update  The   argument is needed because the website is in a folder in GitHub so add your…]]></description><link>https://carlbarrdahl.github.io/web/building-portfolio/</link><guid isPermaLink="false">https://carlbarrdahl.github.io/web/building-portfolio/</guid><pubDate>Wed, 02 Jan 2019 22:32:03 GMT</pubDate><content:encoded>&lt;h2&gt;Setup GatsbyJS&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Carl B portfolio]]></title><description><![CDATA[Personal web for Carl Barrdahl]]></description><link>https://carlbarrdahl.github.io/web</link><generator>RSS for Node</generator><lastBuildDate>Sat, 19 Jan 2019 19:15:14 GMT</lastBuildDate><item><title><![CDATA[Building a portfolio part 1]]></title><description><![CDATA[Setup GatsbyJS Update   in   and manifest options for the plugin  . Deploy to GitHub pages Add deploy script to  The   argument is needed…]]></description><link>https://carlbarrdahl.github.io/web/building-portfolio/</link><guid isPermaLink="false">https://carlbarrdahl.github.io/web/building-portfolio/</guid><pubDate>Fri, 04 Jan 2019 22:32:03 GMT</pubDate><content:encoded>&lt;h3&gt;Setup GatsbyJS&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;npx gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Modify &lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;Deploy to GitHub pages&lt;/h2&gt;
+&lt;p&gt;Update &lt;code class=&quot;language-text&quot;&gt;siteMetaData&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt; and manifest options for the plugin &lt;code class=&quot;language-text&quot;&gt;gatsby-plugin-manifest&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Deploy to GitHub pages&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;npm install gh-pages --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Update &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Add deploy script to &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token property&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token property&quot;&gt;&quot;deploy&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;gatsby build --prefix-paths &amp;amp;&amp;amp; gh-pages -d public&quot;&lt;/span&gt;
@@ -12,4 +12,412 @@
 &lt;p&gt;The &lt;code class=&quot;language-text&quot;&gt;--prefix-paths&lt;/code&gt; argument is needed because the website is in a folder in GitHub so add your reponame to  &lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   pathPrefix&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/&amp;lt;reponame&gt;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[Hello! 👋]]></description><link>https://carlbarrdahl.github.io/web/hello-world/</link><guid isPermaLink="false">https://carlbarrdahl.github.io/web/hello-world/</guid><pubDate>Wed, 02 Jan 2019 22:32:03 GMT</pubDate><content:encoded>&lt;p&gt;Hello! 👋&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can now deploy to Github pages by running &lt;code class=&quot;language-text&quot;&gt;npm run deploy&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;Add projects&lt;/h3&gt;
+&lt;h4&gt;Querying project pages&lt;/h4&gt;
+&lt;p&gt;First we need to add a new plugin to &lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt; so we can query the project pages.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;plugins&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    resolve&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`gatsby-source-filesystem`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    options&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      path&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;__dirname&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/content/projects`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`projects`&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Adding content and listing projects&lt;/h4&gt;
+&lt;p&gt;We then create the folder &lt;code class=&quot;language-text&quot;&gt;/content/projects&lt;/code&gt; and add the first project.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;mkdir content/projects
+touch content/projects/pakt.md&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Fill the project file with details about the project.&lt;/p&gt;
+&lt;p&gt;You’ll notice the project will be listed under Posts. Let’s fix that by opening &lt;code class=&quot;language-text&quot;&gt;src/pages/index.js&lt;/code&gt; and adding &lt;code class=&quot;language-text&quot;&gt;fileAbsolutePath&lt;/code&gt; under &lt;code class=&quot;language-text&quot;&gt;node&lt;/code&gt; in the GraphQL query and then create a function to split based on path.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;filterByType&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;type&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
+  data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;allMarkdownRemark&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;edges&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;edge &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
+    edge&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fileAbsolutePath&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;type&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; posts &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;filterByType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/blog/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; projects &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;filterByType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/projects/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let’s refactor and move our posts and projects to their own components.&lt;/p&gt;
+&lt;p&gt;Here’s what the ProjectList component looks like:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; projects &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;React.Fragment&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Projects&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;projects&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; node &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fields&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;slug&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Link&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`projects/&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fields&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;slug&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;frontmatter&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Link&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;small&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;frontmatter&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;tags&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;small&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;dangerouslySetInnerHTML&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; __html&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;excerpt &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;React.Fragment&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Project page template&lt;/h4&gt;
+&lt;p&gt;Unless we want to use the same template for our project details page we need to handle that. &lt;/p&gt;
+&lt;p&gt;First, let’s create a new template by just copying the blog post. Don’t forget to update the class name and export otherwise it will crash.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;cp src/templates/blog-post.js src/templates/project-page.js&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;By including the file path in our GraphQL query we can then render a different template based on which folder contains the markdown file.&lt;/p&gt;
+&lt;p&gt;First we update the &lt;code class=&quot;language-text&quot;&gt;createPages&lt;/code&gt; function in &lt;code class=&quot;language-text&quot;&gt;gatsby-node.js&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;graphql&quot;&gt;&lt;pre class=&quot;language-graphql&quot;&gt;&lt;code class=&quot;language-graphql&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# add fileAbsolutePath to the query&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+edges &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  node &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    fileAbsolutePath
+    &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then define the templates in the &lt;code class=&quot;language-text&quot;&gt;createPages&lt;/code&gt; function in &lt;code class=&quot;language-text&quot;&gt;gatsby-node.js&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; templates &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  blog&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`./src/templates/blog-post.js`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  projects&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`./src/templates/project-page.js`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And resolve the template based on the file path and update the page path:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; contentPath &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; post&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fileAbsolutePath
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/content&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;createPage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  path&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; contentPath&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; post&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fields&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;slug &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  component&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; templates&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;contentPath&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  context&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    slug&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; post&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fields&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;slug&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    previous&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    next
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[Hello! 👋]]></description><link>https://carlbarrdahl.github.io/web/hello-world/</link><guid isPermaLink="false">https://carlbarrdahl.github.io/web/hello-world/</guid><pubDate>Wed, 02 Jan 2019 22:32:03 GMT</pubDate><content:encoded>&lt;p&gt;Hello! 👋&lt;/p&gt;</content:encoded></item><item><title><![CDATA[b0tt0]]></title><description><![CDATA[An e-commerce platform where users explore nearby connected vendors (restaurants, food trucks, bars, venues, etc) and place orders and…]]></description><link>https://carlbarrdahl.github.io/web/b0tt0/</link><guid isPermaLink="false">https://carlbarrdahl.github.io/web/b0tt0/</guid><pubDate>Wed, 02 Jan 2019 22:32:03 GMT</pubDate><content:encoded>&lt;p&gt;An e-commerce platform where users explore nearby connected vendors (restaurants, food trucks, bars, venues, etc) and place orders and follow updates through push notifications. Vendors see incoming orders and can push them through an order flow to send updates to users&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Pakt]]></title><description><![CDATA[Pakt is a platform where users can create and share contracts. Documents are uniquely identified with a hash of its content to ensure…]]></description><link>https://carlbarrdahl.github.io/web/pakt/</link><guid isPermaLink="false">https://carlbarrdahl.github.io/web/pakt/</guid><pubDate>Wed, 02 Jan 2019 22:32:03 GMT</pubDate><content:encoded>&lt;p&gt;Pakt is a platform where users can create and share contracts. Documents are uniquely identified with a hash of its content to ensure everyone signs the same copy and no tampering is done. Signing and verification of users identity is done with BankID which is the leading electronic identification app in Sweden.&lt;/p&gt;
+&lt;p&gt;Other services can easily be integrated by specifying webhooks that gets triggered when changes occur in the system.&lt;/p&gt;
+&lt;p&gt;Future improvements could include adding Swish (similar to BankID but for sms payments) to add costs to creating documents or signatures. Users could also be notified by sms when contracts are assigned or new signatures created to connected contract.&lt;/p&gt;
+&lt;p&gt;Some documents might be sensitive to store on central servers. In that case something like &lt;a href=&quot;https://ipfs.io&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;ipfs&lt;/a&gt; could be used to store the documents and then secure them with smart contracts on a blockchain, &lt;a href=&quot;http://ethereum.org&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Ethereum&lt;/a&gt; for instance.&lt;/p&gt;
+&lt;h3&gt;Screenshots&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/web/static/89137aaa67e0fd76627505b30e327f6c/e1f19/create.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAACX0lEQVQ4y31Ty27TUBB1VViyoCBUxGNRiapA2SDxDyz5AH6GFduWAkUUSikL6KoSAolGqgpxHo7tOIXmAYkar4DSgIjSJHb8uIeZmzjUEPVKR+MZa47PzLlWlFMzmLpxEycuXINy+RbOzwW4uCBwbi7E8eu3MTYxhfGz9O70DMYnr+LY5KwE58rJS1Ampqk+i7EzVyifhvL63SbeJrbwZmMTGykL7+sekrYnYyLzEYktFS/W1rHwaBmLT1YJz7H4dBUPllZw//EzwgoeUo3BzwpGHhHL9r5/Q3HnEz5XyqiUSygVdyiWZc4ol4qDWgmK73lot9twHBe/m03s//yFvR8NGfcbDVkvU3MyqSKbzULXdSRVFel0GplMFlouR3UN6VQKhmH+VRiGITqdDppE2mq1JPhDQRCgXq9LMsMwYJqmRI6IGFzL5/PQjDxMigoT+b4Pj5R2u90huBYd27alskKhIJsZlmUNwblu9usKNzJBr9eTcF1XkstNiv4uWSGriciOghKNy+DxGEzEH4pURgojNVH8V60k5GbeVaTQcRxJzpFzPrVaLTaypmkxIn7HOx4SymYas+cHFAM4rgfX8+H0PAQhUK1Woarq0BiOfZczQ2NyRDokbB0cwPdYDYPHDAd3UQxG/n+HkdvsrEXI6pHLcvEB9K8h7nwIMZ8TmNcF7hHupgWWtoHduk0q9NjuDu8tZko4cLLSoGZL4GVRYK0U4lUxxPJ2iPUvA0JdH0kwwmWBPqmIjRkf2ZZ7YlMO379RUAYCiZS2R6sLJISEHwhJuUv3kJ016fLy73UU/gC/DQiWkmhXiQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Contract creation&quot;
+        title=&quot;&quot;
+        src=&quot;/web/static/89137aaa67e0fd76627505b30e327f6c/fb8a0/create.png&quot;
+        srcset=&quot;/web/static/89137aaa67e0fd76627505b30e327f6c/1a291/create.png 148w,
+/web/static/89137aaa67e0fd76627505b30e327f6c/2bc4a/create.png 295w,
+/web/static/89137aaa67e0fd76627505b30e327f6c/fb8a0/create.png 590w,
+/web/static/89137aaa67e0fd76627505b30e327f6c/526de/create.png 885w,
+/web/static/89137aaa67e0fd76627505b30e327f6c/fa2eb/create.png 1180w,
+/web/static/89137aaa67e0fd76627505b30e327f6c/08f6a/create.png 1770w,
+/web/static/89137aaa67e0fd76627505b30e327f6c/e1f19/create.png 2048w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+Contracts are easily created by dragging a document to upload (or browsing) and filling out the details. Start and end date for contract validity can be set and participants can be added by entering their email.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/web/static/69657204287cbd00397a8c5481ec99bd/e1f19/view.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAACaklEQVQ4y41SWW4TQRBtFPhEYt/+IkFYQr7gCBwKjJfAKRCcAYQESezxlhAHiSsgJPjwjOOZscezb555VLVpx2GRKOmpumu6Xr9600Jcvov1R09wfv0xxIXbWLuxiXO3trB2fRPi6n2cvbklIa7co28PT+3FxQ2ISxuyfubaA9rfgfjQ6qE/+IL2wWfsdQ+x094H1z5qfex2DmTm/V73E5q9QzTpTKs3QKt/RPuBXLf3j6ARWv0BBFYijiI0XrzE00oVlVodz2sNVKp1PKvWVtZ1+tZAtb69RK2xLXtevX4DEYQhIiLiGJsmdnabaGpt7LUYmsy81zpddLpd9LoatLb6doKW1sHbd+8hmCzPc8znc8xcF/+KNIlhuzm+2kBU/P2MbU8gkiRBlmUoyxLObCbVZllOOUYcx0iSFEVRIqG1H6ZwQiJMS2ovZY8Cx1DXFwrTNJUqHcdBTAQW3aTrw18wEJItTB6GAaLAI69DeJ4n4fu+7OMJR6MRBJOxQi5MmZAaHS+B5SQI45xuL2SNL16Qhn+sgyCQKiUhF5TkGY3MCv2I1LoBeeqTCh//G4ZhnHjI4dJPieMEtqljNPxGZC5M05IjqREZfI4zC2CofknI6oqiWCEk82cGpuYPWWOPTHpOlmVJcDOfZ88VVL8k5IUaeUEYwXNGyNJkWWMi27alGr5AeaZCrQ1jtFC49JCa2VNvdgxnohNpJD1khZPJRJI70ymmBLZKkal+/XeFHt3OB92pjsn4O8piLr1ihUzIKm1r4SnXWO1q//F4fJqQc07PJ6VxGfm8kI88Jd84L0G+pWkmweeXyOf4CVXSKgGFLpPpAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Contract view&quot;
+        title=&quot;&quot;
+        src=&quot;/web/static/69657204287cbd00397a8c5481ec99bd/fb8a0/view.png&quot;
+        srcset=&quot;/web/static/69657204287cbd00397a8c5481ec99bd/1a291/view.png 148w,
+/web/static/69657204287cbd00397a8c5481ec99bd/2bc4a/view.png 295w,
+/web/static/69657204287cbd00397a8c5481ec99bd/fb8a0/view.png 590w,
+/web/static/69657204287cbd00397a8c5481ec99bd/526de/view.png 885w,
+/web/static/69657204287cbd00397a8c5481ec99bd/fa2eb/view.png 1180w,
+/web/static/69657204287cbd00397a8c5481ec99bd/08f6a/view.png 1770w,
+/web/static/69657204287cbd00397a8c5481ec99bd/e1f19/view.png 2048w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+Documents are embedded to easily be read without need of downloading. Future improvements can include templates to dynamically generate documents based on data.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/web/static/3805ae500e29c33025a42488e1786318/e1f19/sign.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAABMUlEQVQ4y6WSu1LDMBBFVfADQMMPAA2/jocmQwN0/AMNBcMjFMQPPSzZknJZyXYSbIdgo5kzd63Zvb6WxdjpJY7OrsBOLsCOz4lOZ5Is7nFz+4BkcYfrAyQ77Oth1q2xBS1t7bGzB/zsHYetMo4hAmnOkVIdtSXnEgVXUcfnOFgeG7ZkBQ2JEkqVkFKiLMuI1hreU2RaQbve/vyoYVDnHGFR1/XGqFuzDK21Azpz95+EjTYE01mGhVCoqhrGGDo7A6kUnanaPFeUdNYne0q49o5ShaR1TOxjajvRUFTwZgm7ekSRPqP4eoIzr7QXeIG3OfWWUxLSFbECVr9DcqJ4g5ZLaPVJ+gFbiymGzcUNd5FLA6FaQi11VC4as6w3OzBs3iijaRz4ha6/n3LvT/kLY73fg+RCPZEb5dgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Contract sign&quot;
+        title=&quot;&quot;
+        src=&quot;/web/static/3805ae500e29c33025a42488e1786318/fb8a0/sign.png&quot;
+        srcset=&quot;/web/static/3805ae500e29c33025a42488e1786318/1a291/sign.png 148w,
+/web/static/3805ae500e29c33025a42488e1786318/2bc4a/sign.png 295w,
+/web/static/3805ae500e29c33025a42488e1786318/fb8a0/sign.png 590w,
+/web/static/3805ae500e29c33025a42488e1786318/526de/sign.png 885w,
+/web/static/3805ae500e29c33025a42488e1786318/fa2eb/sign.png 1180w,
+/web/static/3805ae500e29c33025a42488e1786318/08f6a/sign.png 1770w,
+/web/static/3805ae500e29c33025a42488e1786318/e1f19/sign.png 2048w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+Sign contract by entering your SSN and open app on mobile. QR code can be added for a more secure (and convenient) signing experience.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/web/static/9c084625503f202ee80ea71e1ecb2db6/e1f19/list.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAABeElEQVQ4y62TzUrDQBDHR3rxVJTgBwo9FL978KKvoO/jG/gQgu+homlpU2rrQbx78KIvEJpvk2z2787KlhBLbaEDP3Zmdr4ySYisQzTPLlBvnoPW9rCy2UJtq6XOE1hXr2jcAI1bYPXyGlTfRW3nFLXtFsg6UvH7oPUDHU8bx0pX9p3t4KHt4N7u4bH7DNsZotN/QdsZwXl3MfgsMPiS6Lx9wO720ea7/gh2b6jjnxQcy7BOmClSkSsE5hVKswzjsYckSRAr+PQ8D2EYwQ9CBGGMsRco/Mm97/vKHyKKYk2SfMN1XeR5DpJSQgiBTBVmWNezSTnpWhSF9nMCU45nikIgTgUKlUPlRFNoGtWYigOZkL8FTXcD25zAp8EULdvl+3IMpWmKIAg0rE+boDrlnwlLMcRT8aLZiKJI6yy8K24SquWbAuwzNjdnm3do8mX5kc3LMbrxcwInM9V7g/FJ81L+o7qnWcxVcJ6vYKGCi0BYslDOf8AS+QFvuGQP+lVWuQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Contract list&quot;
+        title=&quot;&quot;
+        src=&quot;/web/static/9c084625503f202ee80ea71e1ecb2db6/fb8a0/list.png&quot;
+        srcset=&quot;/web/static/9c084625503f202ee80ea71e1ecb2db6/1a291/list.png 148w,
+/web/static/9c084625503f202ee80ea71e1ecb2db6/2bc4a/list.png 295w,
+/web/static/9c084625503f202ee80ea71e1ecb2db6/fb8a0/list.png 590w,
+/web/static/9c084625503f202ee80ea71e1ecb2db6/526de/list.png 885w,
+/web/static/9c084625503f202ee80ea71e1ecb2db6/fa2eb/list.png 1180w,
+/web/static/9c084625503f202ee80ea71e1ecb2db6/08f6a/list.png 1770w,
+/web/static/9c084625503f202ee80ea71e1ecb2db6/e1f19/list.png 2048w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+All users uploaded and signed contracts are listed.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/web/static/726e4d2432058f29cc3407d7c7d98c32/e1f19/webhooks.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAAChklEQVQ4y42Uy09TQRTGR8RHUAsYkQoKlQSDFARUVuIjMXHlwoU7Y0zYuvA/MdEYRVGJMbpyIcbESixCbWlLbx+gFDamTShNVGoL0vts+zlnyr1SQoiT/DKn05nvntcMY4c60NZ/Bba2frC6dlQ1OlFt70LV4U6whpOobu5FVV0Lam++gmMYOHZXgWMIqL89DmZzgB08gZ38DO1l9e1g9x49xYPHz3Gf5icjeDj8AkPPXvK1Ebx+M4p3Ljfevndh1LcA93cdngQnWcT43E+43B58HPdibMKHsc8+fPjkAYt/+4qZWAxzfF6Yj2M+PifsmVgUvzPL+DeKHINTWre3Hiw4PQ2PxwN/IAC/388J4IvXi4nJSSQSCSiKgkwmA0XVoOkGVE23UBQVsqyIPTJH42ssHA4jFAphmgsTZEejUQSDQSwtLVV8vVQqWdAoFApYW1sTyLIs1oVgJBKxMH+TYCqVqhAqFosVbF4TgpIkCa8Isk3BAE8BeahpGrLZrAhL1/VtIY8ZeeLz+eDleSObwiVBCj+dTotN+XweqqoKcfPg5hSYXjLyjIpBnk1NTQnPSJTsZDIpDhqGIcTIy62g/0xhkUMzVDNsM2Qzh3SARA1D514U1r3hc6GMWSRLcDNmUSiHdJiqmM2t4MevZeRWVgUrq38schzDKKdhW8HUettQS1wfvIMjXRfQ2ncZdud5NHYOCBo6zqGp+yIis/H/ENzQNgNXb4Du/YHjZ7H3aC+nB7uaurG76RR28HsfkGbKght70ISKQlXeKHjp2i3xYNTyR2Rf62nsd5yBjYvXtPQJgpHZsmAoRH1YiSSFxRVcXFysEKQXpYaL7WnuEdCrJF4bu9MS/AuXYNWkCKrlTQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Contract webhooks&quot;
+        title=&quot;&quot;
+        src=&quot;/web/static/726e4d2432058f29cc3407d7c7d98c32/fb8a0/webhooks.png&quot;
+        srcset=&quot;/web/static/726e4d2432058f29cc3407d7c7d98c32/1a291/webhooks.png 148w,
+/web/static/726e4d2432058f29cc3407d7c7d98c32/2bc4a/webhooks.png 295w,
+/web/static/726e4d2432058f29cc3407d7c7d98c32/fb8a0/webhooks.png 590w,
+/web/static/726e4d2432058f29cc3407d7c7d98c32/526de/webhooks.png 885w,
+/web/static/726e4d2432058f29cc3407d7c7d98c32/fa2eb/webhooks.png 1180w,
+/web/static/726e4d2432058f29cc3407d7c7d98c32/08f6a/webhooks.png 1770w,
+/web/static/726e4d2432058f29cc3407d7c7d98c32/e1f19/webhooks.png 2048w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Contract in screenshots from &lt;a href=&quot;https://plainfreelancecontract.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;https://plainfreelancecontract.com/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Swisher]]></title><description><![CDATA[Light-weight progressive webapp that lets you generate a Swish (swedish sms payment app) QR code. This makes payments easier as you don’t…]]></description><link>https://carlbarrdahl.github.io/web/swisher/</link><guid isPermaLink="false">https://carlbarrdahl.github.io/web/swisher/</guid><pubDate>Sun, 17 Jun 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Light-weight progressive webapp that lets you generate a Swish (swedish sms payment app) QR code. This makes payments easier as you don’t have to type or browse phone numbers. Pretty useful when splitting bills among a bunch of people.&lt;/p&gt;
+&lt;p&gt;Enter your phone number, the amount and an optional message and a QR code is generated to be scanned from the Swish app.&lt;/p&gt;
+&lt;p&gt;Sensitive data is encrypted in the URL using AES with an optional key. No data is sent to any server.&lt;/p&gt;
+&lt;h3&gt;Screenshots&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/web/static/f1b96a02e83764a16f6001a1ff6801e2/8e918/blank.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 177.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ8xqgAAAACXBIWXMAAAsSAAALEgHS3X78AAAB60lEQVRIx+1UTW/TQBDN//8HXDhx4FIJKoHECYlDJSQ+CoEq9CNNSFuljuNvr+21N4+Zsb2J3QClKjev9LQzu7PPb57XHmHP2Gw2+Nv4Xc2o3dwFjzRVOB5/x8nkFB+Pxzh6/wGfv37Dpy9jLK5u0D/X5ncIjak3nZWLg8PXeH5wiBev3uAl4e27Izx5+gw/r66lxhhTn9tRPLpPe/dt3ypUWYaT0ykm55eC+U5LFalg1UbUG1nXusTZdC61Py5mSFXWJSwrg3WY4NYL4RBWfiR5ECvEqkCkckGY5ijKSg76tNfWcpzravtSWIVHi9eOZ7FYuvKAIMnpQEZzJjU5qWNCzpfrUGpXQYysKLeE3A4/oSgNNKnVzcxquJBJGBxXzYuo1ypbw11aQvZwcjbF+eWcvJnh5taBH5C6KPqnO2g91PQU9sIl6U7jnxelgta/P4G9ZcVWIctlr4K03pQ4qX1j/2qoXtzkjbeq0N0vpfVsH1qvujHV69o/Jut5mONitoDrBXBcT+a1H8ILIonDOJGcEYSxrC1Xa4l3/ex4yHfKixLrnx+n1kdub7uubM41MXnId7XoeyjedTysc+tnx9vt3l4P+dNSuX4YiCilmbt8tJ/DHQ/7/8OHwrb8mGMgHAgHwoFwIPxPhL8Amf4Rfl1hKAAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;App loaded&quot;
+        title=&quot;&quot;
+        src=&quot;/web/static/f1b96a02e83764a16f6001a1ff6801e2/fb8a0/blank.png&quot;
+        srcset=&quot;/web/static/f1b96a02e83764a16f6001a1ff6801e2/1a291/blank.png 148w,
+/web/static/f1b96a02e83764a16f6001a1ff6801e2/2bc4a/blank.png 295w,
+/web/static/f1b96a02e83764a16f6001a1ff6801e2/fb8a0/blank.png 590w,
+/web/static/f1b96a02e83764a16f6001a1ff6801e2/8e918/blank.png 640w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/web/static/d178e6c5457a2cbe7289a09c5acefc94/8e918/create.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 177.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ8xqgAAAACXBIWXMAAAsSAAALEgHS3X78AAAFfElEQVRIx41WCVMURxTmR1qViolHEjCRMnih4gWKgIKioqKAiuACotYqh+ARDUajOUoTFU/u3WXP2Z2dva9Zvrz3hll23SXJVH3Vx3R//d7Xr/t1GUp8S0tL+K9vtTFl5s988BeLxfFq8h3ef5zCy1eTeP7HC/z95i3+ej0Jx6ILn88z20WE2azx06f4YR0Zx6B1BENj9zFMmHjyHJ3dfbAvOmVMNps15uVZXFbSdO77H25/7n7OwngigQ/Tc/g0uyCwO92GBTRAJyvY6qxYn5X+dDqD6Tlbbnwsnigk1PUs/FoEi94AXD4VLkWFTw0hFE0gHE8RkoJQLIlURpeJwUgcThrv8QepP4EkLZLbFJ0sCIRimFpwYsbukvLTvINIw9CIJBhJQCNylUh4IjvIhNM2F+YcHumPp/II2Z1kWkeaLM0QeUY3wNYkaCCDibjUlzeC26lMVsD9GT27QhgnDT6ShrMLdszM2+D2KtBCYQRULadb6RhcKuoXwgxZwu65laDo5wloUIJh0kcTbdk9U8dSYG1Lasj6MeYWPbC5lZymDhI/SBoyMetplMv1ZW3jqXThSUnrJrIFYE25ZD0ZrLVRp760oTGTFWqYSJJ+DtHMFwhCUYMIBDWoWggKtUPhKLVDAi0UgZ/GeZSA1PMPRk7DNK3opbhj3bwBmhiKiktqOCbgOveZdbMdjMQQIQ0jFKupIg3DRhyyflzXoknRh+NQzddOtDT6jRiNF2vIRyuWTIsurFE0QSvqRoxxXRYlz1gl6hKwdvyPdee57GXucjBjzelyobdvAMOjYxi/9wDPnv+OP1+8hKV/EHfG7+H4yTa0tV/AyBjdQjetsN4expNfnxn6LQd8mXkN8TczN4/Kqh2oqKzCraFRvJ58i4Zjx7Fm7XrUHDyErdU1qNqxG929fdi+ay/KN1dh7O595HMUEE5Nz2DP/jo0nziFjovdOHehC9V7D6K+qRl1R5rQ2HwClVt3YmjkDg41HMPBw41k7d1iQnPrdV3H5R4Ljhw9DsvAdbx7/0Gwr7ZeLGXSk2faMXjDih5LPx4/eYqnz35b3UKny40z7R0yqetyj1j5zaZK3B4eJStbaKEWdF66QuQnsL+uXv4v2OwF5zt32/CnUkCzG6Pkxk3rEJpaWnHpylXsrNmPDeU/oO/aDXz3/RbU1jfiFi1y4FADPnya+neX2boW2s0b1tuk01H0E8mW7buwdkO5WGcZGMTlXgvOnO9Ec+tpiYJVCRW/HyfbzoklLD4Tt3dewr0HD2Wz9pGbrCO73nftushjdyyWcHmZ3UHZrMcygLO0Outz4HAD1ny5Xly82n8Nx2j32YNTBP7PhF6fb/VN+Uh6TPzyFP2DNymAOyRs1n27SVy92N2LjRWbpW8bxSBvEsfro4nHMPNSESGb395xUQjPdXRh6849+GpjBcbo1PxIAc26tZ4+i5bWNllgQ/lm3H/48+qEs3RStmyrRnXNATQ1t8rucjzyzh9ubMbInXGcOnseVbTQ7n21EgEzs3OFGuaf5emZWTlSrBlrxKHBgf7TowlpsyS82198vVGO3KvXb+iFoRQ8S3K7zLHICdzl8cJNiNLbJpFMwecP0AUbgY3k4ITOpT+gIknXFT8QUstptWBTODXy5Wlz+eiSjcBH4ITFUChJuSlZeeji5UeAokWlzgnMTUmeHwd8ORclKc5cdkpMdo9fBnGdSwe1OWGZ5YLTi3mCk8gZ83Qheylj8t25QkgnhPMH5w6N3DMQlbbZJ/XICsxxXFe1sOSlHCE/3RhqkJKTugKF9FOoP0iLsW7c5jJ/DM/x+hS5WHKEvBGlPhba4XRhwb4ok7mMRGMlx3q8SikLtYLVGbw6LyjWlrRQK7DwH0EbJRRsLHCzAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Create payment&quot;
+        title=&quot;&quot;
+        src=&quot;/web/static/d178e6c5457a2cbe7289a09c5acefc94/fb8a0/create.png&quot;
+        srcset=&quot;/web/static/d178e6c5457a2cbe7289a09c5acefc94/1a291/create.png 148w,
+/web/static/d178e6c5457a2cbe7289a09c5acefc94/2bc4a/create.png 295w,
+/web/static/d178e6c5457a2cbe7289a09c5acefc94/fb8a0/create.png 590w,
+/web/static/d178e6c5457a2cbe7289a09c5acefc94/8e918/create.png 640w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/web/static/f31cdcf32dc9f09082d72db995f89391/8e918/decrypt.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 177.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ8xqgAAAACXBIWXMAAAsSAAALEgHS3X78AAACNklEQVRIx+2Uy27TQBSGswSBxJKngAWIBaBKCB6BdUG8Bk/SFQtYUASVAEEQlAqpi1RIQAuBqiq0tInjuz1jm9ipbz9nfIuTphekssuRPs3MOce/z9hnpoEJlqYpjrKDchplsI6wft/HWvsH1jc28XmtjdbHT1j99h1fvrbRlWTUnztUMEmSLKAZJhZeNjG/8ALPX7/N+LDcwtyDR+hIvSxH5I4UQjSOs71jWaGTVdj3A2xu7UA3begWg6KbGRZ3oAlf4e+pBgwaxVrWzCqPOV71CTLBKI5hu30wzwcnxFzA/wSZT+AUc+HL8UfigzAaVhjFCZgIVgzG1odjewH8QZgLpsX+0ziaSHLEOiOKxB9CWla45cWYbTm4M4G7xTg7ti65t+Li9rKDp7uD4ZZXjBCnHms4M7+fK28sXG5auPjKxCUazz/TcZpyzxbxc090NB6quL/qDQXXnRhX33FcW+S4vlgbyXfjfc6tJQc3l8hfyxPMUOxCk2HuV61CPwiwK6voKNoIkmagS+0hER01n/fEXNFreTp+Swos5gwFFVVDQL2YUPvE9IFLbJuBMw7TtOC5LjjnYIwh3NurcsQzARUkK+pQUCbBMIr2Nb9BQpKs4Of2DjW0jR49JI5dXBzP0qIozjQqQe646PbkzCneVKJqOjTdgE7nWqVRo1MhqOeJ3YmXiHjeh8UZHL9xqsuiuDDyiyNnUt7I0TuJCyKtXw4HVfevVIInaVPBqeBUcCo4FfxPgn8B+tLb7q3x84MAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;View locked payment&quot;
+        title=&quot;&quot;
+        src=&quot;/web/static/f31cdcf32dc9f09082d72db995f89391/fb8a0/decrypt.png&quot;
+        srcset=&quot;/web/static/f31cdcf32dc9f09082d72db995f89391/1a291/decrypt.png 148w,
+/web/static/f31cdcf32dc9f09082d72db995f89391/2bc4a/decrypt.png 295w,
+/web/static/f31cdcf32dc9f09082d72db995f89391/fb8a0/decrypt.png 590w,
+/web/static/f31cdcf32dc9f09082d72db995f89391/8e918/decrypt.png 640w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/web/static/485aae2c9c36712f99d35c7c76cabad1/8e918/decrypted.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 177.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ8xqgAAAACXBIWXMAAAsSAAALEgHS3X78AAAFS0lEQVRIx41W+VMUVxDmT8xPplJGo/EKWko0xpOgXHKIgKAcIiA3BLzwJMZ4JEViCoV4crvssvfOzu6y987ypbuXGQZ3SZyqrnmvX7/vdX/d78hDjm91dRX/921mk6cPmoW/SCSKqTfv8H56Fi+n3mD8xQQmX7/Fq3/ewLbswKfz9H4WYDqdGfR4fbg+eh+D10dx694YbpM8eT6O1o5eWJftYpNOpzPzTB7n5XSddZ8R9qfhGx5GYzF8mFvEzIJFxGp3ZjwgA428YK/T4n1a9MlkCnOLS4Z9JBrbCKhpafgCK1h2K3B4/HB4/fD4gwiGYwhFEyRxkWAkjkRKk4nqShR2snf5VNLHEKdFjKRo5IESjGDWYse81SH/mY/L8KghBAhEXYkhQOB+AuGJHCADzi05sGhziT6aMAFyOPGkhiR5miJw/idTaZkcS2REb2trieB+gmxYWJ/S0uuAUeJgmjhcsNgwu2iBz69+Zg2uZukFMEW8ePwhOL0q7MShWwlKSEowLKKGIhkeI3GDT3Ofuc3i0B+KCn/zxMuCzQmL3S08Mk9Wp1d4UgiYhW25z6Ku/aOJpIlDAmQF86dRFOZ/aq3QNVN0zJbONf+j8eQ6h6um+rLRDmi+0o7egSHcufcA43++wNPnv6P1aidujt7F2bIKlFVUY+TGLXR296Krpx9Pnj3fsGvy9A5/8wuL2LP/EHbsycfIzduYnHqN0orz2LJ1B46eLMSR46dx7FQROgjswPdHsX3XPty5/xBmjCzAknPVuNzShua2djRcbsGZ0nMoLq8UfVnleezcu19ALly8hNqGy3gw9igbUC8DznYThXz6TAl6+gfx9v0HTLyaRFFJOQFW4VRRiYTf1duPptar+O3pM6Lkj809tDucuNR8RaSto0tkd/5BDBNnpcQde9XQ1CLeni2rRC31LUvWDbW5wUNVDUiIY48eY2jkhoR6tbMbBUdP4Kvtu2SBb/cdQMX5WklSeVUNZmbnNg85kUyisqZOuBr4eQSFxWXo7hvA4WOn8PXOPejo6hV9Y1Mr6hqbBPDviZebA/oUBfWXmoU/zvaF+ka0tHXg7oMxnCwqxonCsxJqHSVjaPiGJG/Z7sgOWUe32mzoHxoWw+6+QfxUXI4vtmxFVU296JnH6tqLEjIvXH2hXmp306RMz8zi8ZNn6BsclgS0tndKmTRSkji7ew8UoP1aDwp+OC785h88bBS2lguQV+PaY++4fDjDX27biVt37uHg4R+l7jjkmroGXGm/JgliB/6zsJk73gUcHvM2SFxxHXKfJ3P95R86QrVaKkkysmy+pMyAvF+Z9E4yvks74lpPH8b/ekF7tw/vP0zjm93fydZ8+MuveEeFz6Vmvjnz1i8jOj1op9idLipwl1w8sXgCXp8CP02yWG3S5yuU+ylNE5s46fhA2sAhd/hO+UhnoJsOWhcdsDaXTy4tbjvo4GWxkk7v80HM43xWsi7rgOVTlwcZSDfm24/bup6F2xaHR8b4hOc2O8F3yzogHY7BlTDC9PxYYQln/uFPhEPcYBPO6HluPJFYB3R7yG23B4rih4844x3jozY/R1jPfxanK9PmsYyNAsVPnrrcxvNEAB2kyPUk4RfCxyUbiRUeWojbodBKzpvQSQsbgJxJF3mp0PWZWX1deIwj4L/Xp2SN8xyOgivDAEylUmLsWZukt82TjAXWFjGL2+OT558B6HJ7hRs1EJQa04W5Ye+YEp1HvS514Tms19+MBoe5Pp7MhT5PrwmezHZWmz2nLTtlAOoZ5Ukcni68uhoIGJ6ra16Zbbjvprm6U/8C2XAhBdSbTioAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Decrypted payment&quot;
+        title=&quot;&quot;
+        src=&quot;/web/static/485aae2c9c36712f99d35c7c76cabad1/fb8a0/decrypted.png&quot;
+        srcset=&quot;/web/static/485aae2c9c36712f99d35c7c76cabad1/1a291/decrypted.png 148w,
+/web/static/485aae2c9c36712f99d35c7c76cabad1/2bc4a/decrypted.png 295w,
+/web/static/485aae2c9c36712f99d35c7c76cabad1/fb8a0/decrypted.png 590w,
+/web/static/485aae2c9c36712f99d35c7c76cabad1/8e918/decrypted.png 640w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;</content:encoded></item></channel></rss>
