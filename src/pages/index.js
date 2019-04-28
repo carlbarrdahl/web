@@ -20,16 +20,19 @@ const IndexPage = () => (
         <Hello>Hello, I'm Carl 👋</Hello>
         <Title>Fullstack / UX developer with appreciation for simplicity</Title>
         <Subtitle>
-          Building the products and services of tomorrow. Wide range experience
+          Building the products and services of tomorrow. Experience in building
+          platforms for marketing campaigns and IoT, e-commerce, PWA apps,
+          real-time games and more.
+          {/* Wide range experience
           in working on innovative products ranging from IoT, e-commerce,
           realtime multiplayer games, personalized housing recommendations
-          through machine learning and more.
+          through machine learning and more. */}
         </Subtitle>
       </Container>
     </Section>
-    <Section id="work">
+    <Section id="projects">
       <Container>
-        <Section.Title>Work</Section.Title>
+        <Section.Title>Projects</Section.Title>
         <WorkList />
       </Container>
     </Section>
