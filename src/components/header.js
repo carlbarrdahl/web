@@ -1,4 +1,5 @@
-import { Link } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "tachyons-components"
@@ -22,10 +23,36 @@ const links = [
   }
 ]
 const Nav = styled("nav")`flex justify-center align-center`
-Nav.Item = styled(Link)`f3-ns pa3 dark-blue no-underline`
+const Header = styled("header")`pa2`
+Nav.Item = styled(Link)`f3-ns pa3 dark-blue no-underline dim`
 
-const Header = ({}) => (
-  <header style={{ marginBottom: 8 }}>
+const Photo = styled(Img)`w3 br-100`
+const Home = () => (
+  <Link to="/">
+    <StaticQuery
+      query={graphql`
+        query {
+          fullImage: file(relativePath: { eq: "about/carl.jpg" }) {
+            childImageSharp {
+              fluid(maxWidth: 120) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      `}
+      render={data => (
+        <Photo
+          className="grow"
+          // style={{ width: 48, height: 48 }}
+          fluid={data.fullImage.childImageSharp.fluid}
+        />
+      )}
+    />
+  </Link>
+)
+export default ({}) => (
+  <Header>
     <div
       style={{
         margin: `0 auto`,
@@ -33,7 +60,7 @@ const Header = ({}) => (
       }}
     >
       <Nav>
-        <Link to="/" style={{ width: 48, height: 48, background: "#eee" }} />
+        <Home />
         {links.map(link => (
           <Nav.Item key={link.href} to={link.href}>
             {link.label}
@@ -41,15 +68,5 @@ const Header = ({}) => (
         ))}
       </Nav>
     </div>
-  </header>
+  </Header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string
-}
-
-Header.defaultProps = {
-  siteTitle: ``
-}
-
-export default Header

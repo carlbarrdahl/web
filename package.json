@@ -20,12 +20,15 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "tachyons": "^4.11.1",
     "tachyons-components": "^1.0.1"
   },
   "devDependencies": {
     "prettier": "^1.17.0"
   },
-  "keywords": [ "gatsby" ],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

@@ -15,9 +15,9 @@ f4 input-reset pa2 mt1 bg-transparent w-100 ba b--black-20 sans-serif
 const Button = styled("button")`
   f5 fw6 ba
   bg-black-80 white w-100
-  hover--bg-black-60
+  hover-bg-black
   ph4 pv3
-  grow no-underline dib
+  no-underline dib pointer
 `
 const mapColors = ({ type }) => {
   const colorMap = {

@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "tachyons-components"
 
 const List = styled("div")`flex flex-wrap nr2 nl2`
-const Card = styled("div")`w-100 w-50-l pa2 no-underline dark-gray`
+const Card = styled("div")`w-100 w-50-l pa2 no-underline dark-gray dim`
 Card.Content = styled("div")`pa4 ba b--black-10`
 const Title = styled("h3")`f2 mb1 mt0`
 const Description = styled("h4")`f4 lh-copy normal mt0 measure`
