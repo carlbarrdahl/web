@@ -18,11 +18,14 @@ const IndexPage = () => (
     <Section>
       <Container>
         <Hello>Hello, I'm Carl 👋</Hello>
-        <Title>Fullstack / UX developer with appreciation for simplicity</Title>
+        <Title>Building fast, reliable &amp; engaging web apps</Title>
+        {/* <Title>Building fast, reliable & engaging web apps</Title> */}
         <Subtitle>
-          Building the products and services of tomorrow. Experience in building
+          Using modern web technologies to create reponsive, offline-enabled and
+          immersive experiences
+          {/* Building the products and services of tomorrow. Experience in building
           platforms for marketing campaigns and IoT, e-commerce, PWA apps,
-          real-time games and more.
+          real-time games and more. */}
           {/* Wide range experience
           in working on innovative products ranging from IoT, e-commerce,
           realtime multiplayer games, personalized housing recommendations
