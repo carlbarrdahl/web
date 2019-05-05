@@ -15,7 +15,7 @@ const WorkTemplate = ({ children, pageContext, ...props }) => {
       <Container>
         <Title>{title}</Title>
         <Description>{description}</Description>
-        <div className="f4">{children}</div>
+        <div className="f4 lh-copy">{children}</div>
       </Container>
     </Layout>
   )

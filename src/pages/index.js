@@ -9,20 +9,25 @@ import WorkList from "../components/WorkList"
 import ContactForm from "../components/ContactForm"
 
 const Title = styled("h1")`f2 f1-l lh-solid mt0 mb2`
-const Subtitle = styled("h2")`f4 f3-l lh-copy fw4`
-const Hello = styled("h3")`f6 f3-l lh-copy fw8 ttu mb0 tracked`
+const Subtitle = styled("h2")`f3 f2-l lh-copy fw4`
+const Hello = styled("div")`f5 mt4 ttu tracked`
 const P = styled("p")`f4`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Section>
+    <Section bg="near-white">
       <Container>
         <Hello>Hello, I'm Carl 👋</Hello>
-        <Title>Building fast, reliable &amp; engaging web apps</Title>
+        <Title>
+          Building fast, reliable &amp; engaging{" "}
+          <Link className="link dark-blue  underline-hover" to="/services/pwa">
+            web apps
+          </Link>
+        </Title>
         {/* <Title>Building fast, reliable & engaging web apps</Title> */}
         <Subtitle>
           Using modern web technologies to create reponsive, offline-enabled and
-          immersive experiences
+          immersive experiences on the web.
           {/* Building the products and services of tomorrow. Experience in building
           platforms for marketing campaigns and IoT, e-commerce, PWA apps,
           real-time games and more. */}
@@ -31,6 +36,14 @@ const IndexPage = () => (
           realtime multiplayer games, personalized housing recommendations
           through machine learning and more. */}
         </Subtitle>
+        {/* <small>
+          What the heck is a{" "}
+          <Link to="/services/pwa">progressive web app?</Link>
+        </small> */}
+        {/* <small>
+          Did you know 53% of visits are abandonded if a mobile site takes
+          longer than 3 seconds to load?<sup>[1]</sup>
+        </small> */}
       </Container>
     </Section>
     <Section id="projects">

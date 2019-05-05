@@ -3,7 +3,8 @@ import { Link } from "gatsby"
 import styled from "tachyons-components"
 
 const List = styled("div")`flex flex-wrap nr2 nl2`
-const Card = styled("div")`w-100 w-50-l pa2 no-underline dark-gray dim`
+const Card = styled(Link)`w-100 w-50-l pa2 link dark-gray hover-dark-blue`
+// no-underline dark-gray dim
 Card.Content = styled("div")`pa4 ba b--black-10`
 const Title = styled("h3")`f2 mb1 mt0`
 const Description = styled("h4")`f4 lh-copy normal mt0 measure`
@@ -18,7 +19,12 @@ export default () => (
           <Description>{work.description}</Description>
           {work.url && (
             <URL>
-              <a href={work.url} target="_blank" rel="noopener">
+              <a
+                className="link blue hover-dark-blue"
+                href={work.url}
+                target="_blank"
+                rel="noopener"
+              >
                 {work.url}
               </a>
             </URL>
@@ -43,12 +49,12 @@ const works = [
       "Create, manage and sign digital contracts using the mobile app BankID",
     href: "/work/pakt",
     url: "https://pakt-dev.firebaseapp.com"
+  },
+  {
+    title: "Adfenix",
+    description: "Housing recommendations powered by machine learning",
+    href: "/work/adfenix"
   }
-  // {
-  //   title: "Adfenix",
-  //   description: "Housing recommendations powered by machine learning",
-  //   href: "/work/adfenix"
-  // },
   // {
   //   title: "Knodd",
   //   description:

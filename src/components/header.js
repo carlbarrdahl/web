@@ -21,10 +21,14 @@ const links = [
     label: "Contact",
     href: "#contact"
   }
+  // {
+  //   label: "Blog",
+  //   href: "/articles"
+  // }
 ]
-const Nav = styled("nav")`flex justify-center align-center`
+const Nav = styled("nav")`flex justify-center items-center`
 const Header = styled("header")`pa2`
-Nav.Item = styled(Link)`f3-ns pa3 dark-blue no-underline dim`
+Nav.Item = styled(Link)`f3-ns pa3 link dark-blue no-underline underline-hover`
 
 const Photo = styled(Img)`w3 br-100`
 const Home = () => (
@@ -42,31 +46,20 @@ const Home = () => (
         }
       `}
       render={data => (
-        <Photo
-          className="grow"
-          // style={{ width: 48, height: 48 }}
-          fluid={data.fullImage.childImageSharp.fluid}
-        />
+        <Photo className="grow" fluid={data.fullImage.childImageSharp.fluid} />
       )}
     />
   </Link>
 )
 export default ({}) => (
   <Header>
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960
-      }}
-    >
-      <Nav>
-        <Home />
-        {links.map(link => (
-          <Nav.Item key={link.href} to={link.href}>
-            {link.label}
-          </Nav.Item>
-        ))}
-      </Nav>
-    </div>
+    <Nav>
+      <Home />
+      {links.map(link => (
+        <Nav.Item key={link.href} to={link.href}>
+          {link.label}
+        </Nav.Item>
+      ))}
+    </Nav>
   </Header>
 )
