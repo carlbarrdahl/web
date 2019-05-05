@@ -12,8 +12,8 @@ const Subtitle = styled("h2")`f3 f2-l lh-copy fw4`
 const Hello = styled("div")`f5 ttu tracked mb4`
 const P = styled("p")`f4`
 
-const Block = styled("article")`w-third-l pr4-l pv2`
-Block.Title = styled("h2")`f3 fw6`
+const Block = styled("article")`w-third-l pr4-l`
+Block.Title = styled("h2")`f3 fw6 mt0`
 Block.Content = styled("p")`f4 lh-copy`
 const IndexPage = () => (
   <Layout>
@@ -62,8 +62,8 @@ const IndexPage = () => (
     <Section id="case-studies" bg="near-white">
       <Container>
         <Section.Title>Case studies</Section.Title>
-        <Link to="#case-studies" className="link">
-          <Block className="hover-blue dark-blue">
+        <Link to="#case-studies" className="link hover-blue dark-blue">
+          <Block>
             <Block.Title>Re-imagining the checkout</Block.Title>
             <Block.Content>
               Store using PaymentRequestAPI and Push Notifications to track
@@ -89,7 +89,7 @@ const IndexPage = () => (
 )
 
 const mapColor = ({ bg, color }) => `bg-${bg} ${color}`
-const List = styled("div")`flex flex-wrap`
+const List = styled("div")`flex flex-wrap mt4`
 const Card = styled(Link)`
 w-100 w-50-l pa4 link
 ${mapColor}
