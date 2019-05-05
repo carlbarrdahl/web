@@ -59,14 +59,20 @@ const IndexPage = () => (
         </div>
       </Container>
     </Section>
-    {/* <Section id="case-studies">
+    <Section id="case-studies" bg="near-white">
       <Container>
         <Section.Title>Case studies</Section.Title>
-        <Link to="#case-studies">
-          e-commerce store with payment and push notifications
+        <Link to="#case-studies" className="link">
+          <Block className="hover-blue dark-blue">
+            <Block.Title>Re-imagining the checkout</Block.Title>
+            <Block.Content>
+              Store using PaymentRequestAPI and Push Notifications to track
+              orders
+            </Block.Content>
+          </Block>
         </Link>
       </Container>
-    </Section> */}
+    </Section>
     <Section id="projects">
       <Container>
         <Section.Title>Projects</Section.Title>
