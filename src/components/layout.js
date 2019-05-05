@@ -12,7 +12,7 @@ const mapColor = ({ bg, color }) => `bg-${bg} ${color}`
 export const Section = styled("section")`ph3 pv5 ph5-ns pb5 
 ${mapColor}`
 // bb b--black-10
-Section.Title = styled("h1")`f5 ttu tracked`
+Section.Title = styled("h1")`f5 ttu tracked mb3`
 
 // export const Section = styled("section")`ph3 pv3 ph5-ns pb5`
 export const Container = styled("div")`mw8 center`
