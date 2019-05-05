@@ -13,21 +13,25 @@ f4 input-reset pa2 mt1 bg-transparent w-100 ba b--black-20 sans-serif
 `
 
 const Button = styled("button")`
-  f5 fw6 ba
-  bg-black-80 white w-100
-  hover-bg-black
+  f6 ba fw6 ttu
+  bg-navy
+  hover-bg-dark-blue
+  near-white
   ph4 pv3
   no-underline dib pointer
+  br2
 `
 const mapColors = ({ type }) => {
   const colorMap = {
-    success: [ "dark-green", "bg-washed-green" ],
+    success: [
+      /*  "dark-green", "bg-washed-green"  */
+    ],
     error: [ "dark-red", "bg-washed-red" ]
   }
   return (colorMap[type] || []).join(" ")
 }
 const Alert = styled("div")`
-ph4 pv4 br2 dark-green bg-washed-green
+ph4 pv4 br2 dark-gray bg-near-white
 ${mapColors}
 `
 Alert.Title = styled("h3")`f3 mt0 mb2`
@@ -96,7 +100,7 @@ const ContactForm = () => {
           name="message"
           required
           rows="4"
-          placeholder="Enter your message..."
+          placeholder="Enter your message"
         />
       </Label>
       <Label>
@@ -105,10 +109,12 @@ const ContactForm = () => {
           name="email"
           type="email"
           required
-          placeholder="What is your email so I know where to reply?"
+          placeholder="What is your email?"
         />
       </Label>
-      <Button type="submit">Send email</Button>
+      <div className="flex justify-end">
+        <Button type="submit">Contact me</Button>
+      </div>
     </Form>
   )
 }
