@@ -20,6 +20,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Section bg="lightest-blue" color="navy">
       <Container>
+        <Section.Title>Carl Barrdahl • Fullstack / UX developer</Section.Title>
         <Title>
           Increase your conversion and revenue with fast, reliable and engaging{" "}
           <Link className="link dark-blue  underline-hover" to="/services/pwa">
@@ -114,14 +115,6 @@ const works = [
     url: "https://swisher-app.firebaseapp.com"
   },
   {
-    title: "Pine Valley",
-    description: "Pomodoro-style productivity game to help you stay focused",
-    href: "/preview#projects",
-    bg: "dark-green",
-    color: "washed-green",
-    url: "https://pakt-dev.firebaseapp.com"
-  },
-  {
     title: "b0tt0",
     description:
       "Order food and drinks for pickup with built-in queue management and push notifications to stay updated on order changes",
@@ -130,6 +123,14 @@ const works = [
     bg: "yellow",
     color: "dark-gray",
     url: "https://swisher-app.firebaseapp.com"
+  },
+  {
+    title: "Pine Valley",
+    description: "Pomodoro-style productivity game to help you stay focused",
+    href: "/preview#projects",
+    bg: "dark-green",
+    color: "washed-green",
+    url: "https://pakt-dev.firebaseapp.com"
   },
   {
     title: "Pakt",
