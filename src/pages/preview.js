@@ -20,7 +20,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Section bg="lightest-blue" color="navy">
       <Container>
-        <Section.Title>Carl Barrdahl • Fullstack / UX developer</Section.Title>
+        <Section.Title>Carl Barrdahl • web developer</Section.Title>
         <Title>
           Increase your conversion and revenue with fast, reliable and engaging{" "}
           <Link className="link dark-blue  underline-hover" to="/services/pwa">
