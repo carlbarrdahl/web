@@ -12,8 +12,8 @@ const Subtitle = styled("h2")`f3 f2-l lh-copy fw4`
 const Hello = styled("div")`f5 ttu tracked mb4`
 const P = styled("p")`f4`
 
-const Block = styled("article")`w-third-l pr4-l`
-Block.Title = styled("h2")`f3 fw6 ma0`
+const Block = styled("article")`w-third-l pr4-l pv2`
+Block.Title = styled("h2")`f3 fw6`
 Block.Content = styled("p")`f4 lh-copy`
 const IndexPage = () => (
   <Layout>
@@ -45,9 +45,9 @@ const IndexPage = () => (
             </Block.Content>
           </Block>
           <Block>
-            <Block.Title>Responsive</Block.Title>
+            <Block.Title>Responsive & progressive</Block.Title>
             <Block.Content>
-              Looks great on all devices, mobile to desktop
+              Works for every user on every device - mobile to desktop
             </Block.Content>
           </Block>
           <Block>
