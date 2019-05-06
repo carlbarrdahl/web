@@ -40,8 +40,8 @@ const works = [
       "Order food and drinks for pickup with built-in queue management and push notifications to stay updated on order changes",
     // "e-commerce point of sale system for foodtrucks, bars and cafes",
     href: "/preview#projects",
-    bg: "yellow",
-    color: "dark-gray",
+    bg: "gold",
+    color: "black-80",
     url: "https://swisher-app.firebaseapp.com"
   },
   {
