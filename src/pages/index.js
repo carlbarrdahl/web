@@ -23,7 +23,7 @@ const IndexPage = () => (
         <Section.Title>Carl Barrdahl • web developer</Section.Title>
         <Title>
           Increase your conversion and revenue with fast, reliable and engaging{" "}
-          <Link className="link dark-blue  underline-hover" to="/services/pwa">
+          <Link className="link dark-blue  underline-hover" to="/case/checkout">
             web apps
           </Link>
         </Title>
