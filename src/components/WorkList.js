@@ -39,7 +39,7 @@ const works = [
     description:
       "Order food and drinks for pickup with built-in queue management and push notifications to stay updated on order changes",
     // "e-commerce point of sale system for foodtrucks, bars and cafes",
-    href: "/preview#projects",
+    href: "#projects",
     bg: "gold",
     color: "black-80",
     url: "https://swisher-app.firebaseapp.com"
@@ -47,7 +47,7 @@ const works = [
   {
     title: "Pine Valley",
     description: "Pomodoro-style productivity game to help you stay focused",
-    href: "/preview#projects",
+    href: "#projects",
     bg: "dark-green",
     color: "washed-green",
     url: "https://pakt-dev.firebaseapp.com"
@@ -57,7 +57,7 @@ const works = [
     description:
       "Create and share challenges with your friends to increase accountability",
     // description: "Invite your friends to challenges and compete for rewards",
-    href: "/preview#projects",
+    href: "#projects",
     bg: "navy",
     color: "lightest-blue",
     url: "https://pakt-dev.firebaseapp.com"
