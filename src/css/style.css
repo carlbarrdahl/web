@@ -1,0 +1,23 @@
+@import "tachyons";
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+
+html {
+  font-family: 'IBM Plex Sans', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sans-serif {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  /* outline: 1px solid rgba(0, 0, 200, .08); */
+}

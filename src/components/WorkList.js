@@ -4,7 +4,7 @@ import styled from "tachyons-components"
 
 const mapColor = ({ bg, color }) => `bg-${bg} ${color}`
 const List = styled("div")`flex flex-wrap mt4`
-const Card = styled(Link)`
+const Card = styled("a")`
 w-100 w-50-l pa4 link
 ${mapColor}
 `
@@ -15,7 +15,7 @@ const URL = styled("div")``
 const WorkList = () => (
   <List>
     {works.map((work, i) => (
-      <Card to={work.href} key={work.href} {...work}>
+      <Card key={work.href} {...work} target="_blank">
         <Card.Title>{work.title}</Card.Title>
         <Card.Description>{work.description}</Card.Description>
       </Card>
@@ -31,18 +31,18 @@ const works = [
     // "Share your Swish payments with number and payment data encrypted",
     bg: "near-white",
     color: "dark-gray",
-    href: "/work/swisher",
-    url: "https://swisher-app.firebaseapp.com"
+    // href: "/work/swisher",
+    href: "https://swisher.carlb.dev"
   },
   {
     title: "b0tt0",
     description:
       "Order food and drinks for pickup with built-in queue management and push notifications to stay updated on order changes",
     // "e-commerce point of sale system for foodtrucks, bars and cafes",
-    href: "#projects",
+    // href: "#projects",
     bg: "gold",
     color: "black-80",
-    url: "https://swisher-app.firebaseapp.com"
+    href: "https://botto.carlb.dev"
   },
   {
     title: "Pine Valley",
@@ -50,7 +50,7 @@ const works = [
     href: "#projects",
     bg: "dark-green",
     color: "washed-green",
-    url: "https://pakt-dev.firebaseapp.com"
+    url: ""
   },
   {
     title: "Pakt",

@@ -20,4 +20,29 @@ const AboutPage = () => (
   </Layout>
 )
 
+/* 
+
+
+
+Fullstack js developer for freelancing (remote)
+
+Many years experience in building web apps, dashboards, real-time games, bots, e-commerce and more.
+Worked with AWS and glcoud.
+
+Specialize in Progressive Web Apps but open to other things if the project is right.
+
+Current preferred tools & frameworks: React / Gatsby, GraphQL, Serverless
+
+https://carlb.dev
+
+
+
+7 years experience in 
+
+
+working on innovative products ranging from IoT, e-commerce, realtime multiplayer games
+
+
+*/
+
 export default AboutPage
