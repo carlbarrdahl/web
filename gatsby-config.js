@@ -2,26 +2,38 @@ module.exports = {
   siteMetadata: {
     title: `Carl Barrdahl - Developer & UX - Gothenburg, Sweden`,
     description: `Carl Barrdahl - Developer & UX - Gothenburg, Sweden`,
-    author: `@carlbarrdahl`
+    author: `@carlbarrdahl`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-mdx`,
       options: {
-        extensions: [ ".mdx", ".md" ],
+        extensions: [".mdx", ".md"],
         defaultLayouts: {
           // posts: require.resolve("./src/components/default-post-layout.js"),
           // default: require.resolve("./src/components/default-page-layout.js")
-        }
-      }
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: {
+                tsx: "tsx",
+              },
+              aliases: {},
+            },
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -34,15 +46,15 @@ module.exports = {
         background_color: `#00449e`,
         theme_color: `#00449e`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png` // This path is relative to the root of the site.
-      }
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+      },
     },
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-131682053-1"
-      }
-    }
-  ]
+        trackingId: "UA-131682053-1",
+      },
+    },
+  ],
 }

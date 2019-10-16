@@ -1,0 +1,85 @@
+---
+title: Happy at Work report API
+description: Dynamically generate pdf report using Puppeteer
+start: 190911
+end: 190927
+---
+
+import Template from "../../templates/case"
+export default (props) => <Template {...props} />   
+
+
+### Happy at work report api
+
+Happy at Work is a tool to measure well-being and levels of stress in organizations by sending out surveys to employees in regular intervals. Some of these organizations requested a feature to generate pdf reports based on these surveys. These reports should include each question asked along with chart data. The chart data can be displayed in two ways: survey data for periods over time and a summary of all periods.
+
+I was contracted to solve this problem for them with pretty much free reigns. Here's how I did it.
+
+#### Requirements
+
+- API endpoint should be available on Azure
+- Endpoint should receive survey data and a template name
+- Return pdf document
+
+```
+API request -> build report from data and template -> renderPDF -> API response
+```
+
+Working with pdf files and generating them dynamically on the server can be challenging. There are libraries like PDFKit you can use but you would have to specifically tell it what to draw and where, much like the canvas api:
+
+```javascript
+const pdfKitDoc = new PDFDocument()
+questions.forEach((question, i) => {
+  pdfKitDoc
+    // what's the height of each question?
+    .text(question.name, 0, i * ?)
+    // draw charts and calculate these x and y values somehow
+    .moveTo(100, 150)
+    .lineTo(100, 250)
+    .lineTo(200, 250)
+    .fill('#FF3300')
+})
+```
+
+This is not a fun way to build charts. Instead I decided to use React to render static html and use a third-party library to build SVG charts.
+
+That way it's easy to create templates looking like this:
+
+
+```tsx
+const Template = ({ questions, template }) => (
+  <Layout>
+    {questions.map(question => (
+      <Question key={question.id}>
+        <QuestionHeader title={question.name} />
+        <Chart type={template} data={question.chart} />
+      </Question>
+    ))}
+  </Layout>
+)
+```
+
+By using React as a templating engine it's easy to make changes to margins, paddings, font sizes, etc. And we get to use the huge ecosystem of React, including chart libraries. We can then pass this static html to Google Puppeteer to generate a pdf.
+
+##### Generating pdf with Puppeteer
+
+Puppeteer is a headless Chrome browser which can be told to visit sites and get data from the DOM. It can also be used to create pdf files from websites.
+
+It works like this:
+
+```ts
+import puppeteer from 'puppeteer'
+
+export async function renderPDF(html: string) {
+  const browser = await puppeteer.launch({
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  })
+  const page = await browser.newPage()
+  // pass the html string as data:text/html so we don't have to visit a url
+  await page.goto(`data:text/html,${html}`, { waitUntil: 'networkidle0' })
+  
+  const pdf = await page.pdf({ format: 'A4' })
+  await browser.close()
+  return pdf
+}
+```
