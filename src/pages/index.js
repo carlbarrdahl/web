@@ -15,7 +15,7 @@ export default props => {
       </div>
       <Projects />
       <Articles />
-      <Photos />
+      {/* <Photos /> */}
     </section>
   )
 }
