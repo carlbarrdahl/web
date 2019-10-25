@@ -1,5 +1,11 @@
 # Carl B portfolio
-My personal site. Forked from [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog).
+
+My personal site.
+
+Uses:
+
+- gatsby
+- theme-ui
 
 ```sh
 npm install && npm run develop

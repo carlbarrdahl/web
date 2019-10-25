@@ -1,60 +1,24 @@
+require("dotenv").config({ path: `.env` })
+
 module.exports = {
   siteMetadata: {
-    title: `Carl Barrdahl - Developer & UX - Gothenburg, Sweden`,
-    description: `Carl Barrdahl - Developer & UX - Gothenburg, Sweden`,
-    author: `@carlbarrdahl`,
+    title: "Carl Barrdahl",
+    description: "javascript developer",
+    siteUrl: "https://carlb.dev"
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-theme-ui",
     {
-      resolve: `gatsby-mdx`,
-      options: {
-        extensions: [".mdx", ".md"],
-        defaultLayouts: {
-          // posts: require.resolve("./src/components/default-post-layout.js"),
-          // default: require.resolve("./src/components/default-page-layout.js")
-        },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: "gatsby-remark-prismjs",
-            options: {
-              classPrefix: "language-",
-              inlineCodeMarker: {
-                tsx: "tsx",
-              },
-              aliases: {},
-            },
-          },
-        ],
-      },
+      resolve: "gatsby-source-dev",
+      options: { username: "carlbarrdahl" }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-plugin-react-axe",
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `carl_b`,
-        short_name: `carl_b`,
-        start_url: `/`,
-        background_color: `#00449e`,
-        theme_color: `#00449e`,
-        display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-131682053-1",
-      },
-    },
-  ],
+        showInProduction: true,
+        axeOptions: {}
+      }
+    }
+  ]
 }
