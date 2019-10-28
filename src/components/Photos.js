@@ -1,10 +1,28 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 import { Link } from "gatsby"
+import { useState, useEffect } from "react"
 
-const photos = require("../photos")
+function useGooglePhotos(albumId) {
+  const [photos, setPhotos] = useState([])
+  const [loading, setLoading] = useState(false)
+  useEffect(() => {
+    setLoading(true)
+    fetch(`/.netlify/functions/photos?album=${albumId}`)
+      .then(res => res.json())
+      .then(setPhotos)
+      .finally(() => setLoading(false))
+  }, [])
 
+  return { loading, photos }
+}
+
+const ALBUM_ID = "EsU5tsXbq6VG6df9A"
 export default props => {
+  const { loading, photos } = useGooglePhotos(ALBUM_ID)
+
+  console.log(loading, photos)
+
   return (
     <section sx={{ mb: [4, 6] }}>
       <Styled.h2>Photo stream</Styled.h2>
@@ -18,13 +36,11 @@ export default props => {
         }}
       >
         {photos.map(photo => {
-          const { creationTime, width, height } = photo.mediaMetadata
           return (
             <li key={photo.id} sx={{}}>
-              <a href={`${photo.baseUrl}=w${width}-h${height}`} target="_blank">
-                <Styled.img src={photo.baseUrl} />
+              <a href={`${photo}=w${1024}`} target="_blank">
+                <Styled.img src={`${photo}=w${256}`} />
               </a>
-              {/* <div sx={{ color: "white" }}>{format(creationTime)}</div> */}
             </li>
           )
         })}
