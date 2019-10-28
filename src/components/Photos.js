@@ -17,13 +17,12 @@ function useGooglePhotos(albumId) {
   return { loading, photos }
 }
 
-const ALBUM_ID = "EsU5tsXbq6VG6df9A"
 export default props => {
-  const { loading, photos } = useGooglePhotos(ALBUM_ID)
+  const { loading, photos } = useGooglePhotos("EsU5tsXbq6VG6df9A")
 
-  console.log(loading, photos)
-
-  return (
+  return loading ? (
+    <pre>...</pre>
+  ) : (
     <section sx={{ mb: [4, 6] }}>
       <Styled.h2>Photo stream</Styled.h2>
       <ul
@@ -39,7 +38,7 @@ export default props => {
           return (
             <li key={photo.id} sx={{}}>
               <a href={`${photo}=w${1024}`} target="_blank">
-                <Styled.img src={`${photo}=w${256}`} />
+                <Styled.img src={`${photo}=w${320}`} />
               </a>
             </li>
           )
