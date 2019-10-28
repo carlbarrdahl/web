@@ -8,7 +8,8 @@
   "scripts": {
     "start": "gatsby develop",
     "clean": "gatsby clean",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "postinstall": "netlify-lambda install"
   },
   "dependencies": {
     "@emotion/core": "^10.0.21",
@@ -21,6 +22,8 @@
     "gatsby-plugin-react-axe": "^0.2.2",
     "gatsby-plugin-theme-ui": "^0.2.43",
     "gatsby-source-dev": "^0.1.4",
+    "got": "^9.6.0",
+    "netlify-lambda": "^1.6.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
