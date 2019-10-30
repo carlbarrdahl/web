@@ -19,26 +19,25 @@ function useGooglePhotos(albumId) {
 
 export default props => {
   const { loading, photos } = useGooglePhotos("EsU5tsXbq6VG6df9A")
-
   return loading ? (
     <pre>...</pre>
   ) : (
-    <section sx={{ mb: [4, 6] }}>
+    <section sx={{ mb: [4, 6], mx: -2 }}>
       <Styled.h2>Photo stream</Styled.h2>
       <ul
         sx={{
           display: "grid",
           gridGap: 0,
           bg: "black",
-          gridTemplateColumns: ["repeat(auto-fit, minmax(256px, 1fr))"],
+          gridTemplateColumns: ["repeat(auto-fit, minmax(160px, 1fr))"],
           variant: "styles.list"
         }}
       >
         {photos.map(photo => {
           return (
-            <li key={photo.id} sx={{}}>
+            <li key={photo}>
               <a href={`${photo}=w${1024}`} target="_blank">
-                <Styled.img src={`${photo}=w${320}`} />
+                <Styled.img src={`${photo}=w${320}`} sx={{width: "100%"}} />
               </a>
             </li>
           )
@@ -46,8 +45,4 @@ export default props => {
       </ul>
     </section>
   )
-}
-
-function format(date) {
-  return date.split("T")[0]
 }
