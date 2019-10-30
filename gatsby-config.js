@@ -19,6 +19,12 @@ module.exports = {
         showInProduction: true,
         axeOptions: {}
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-131682053-1",
+      },
     }
   ]
 }
