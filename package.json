@@ -6,7 +6,7 @@
   "author": "Carl Barrdahl <carlbarrdahl@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "gatsby develop",
+    "start": "netlify dev",
     "clean": "gatsby clean",
     "build": "gatsby build",
     "postinstall": "netlify-lambda install"

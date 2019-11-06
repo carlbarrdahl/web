@@ -21,8 +21,8 @@ const projects = [
     id: "pakt",
     title: "Pakt",
     description:
-      "Create and share challenges with your friends to increase accountability",
-    url: "https://pakt.carlb.dev"
+      "Create and share challenges with your friends to increase accountability"
+    // url: "https://pakt.carlb.dev"
   }
 ]
 
@@ -39,14 +39,15 @@ export default props => {
       >
         {projects.map(project => (
           <li key={project.id}>
-            {/* <Styled.a
+            <Styled.h3>{project.title}</Styled.h3>
+            <Styled.p>{project.description}</Styled.p>
+            <Styled.a
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-            > */}
-            <Styled.h3>{project.title}</Styled.h3>
-            {/* </Styled.a> */}
-            {project.description}
+            >
+              {project.url}
+            </Styled.a>
           </li>
         ))}
       </ul>

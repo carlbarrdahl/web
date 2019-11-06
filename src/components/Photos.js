@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
-import { Link } from "gatsby"
 import { useState, useEffect } from "react"
 
 function useGooglePhotos(albumId) {
@@ -19,9 +18,7 @@ function useGooglePhotos(albumId) {
 
 export default props => {
   const { loading, photos } = useGooglePhotos("EsU5tsXbq6VG6df9A")
-  return loading ? (
-    <pre>...</pre>
-  ) : (
+  return (
     <section sx={{ mb: [4, 6], mx: -2 }}>
       <Styled.h2>Photo stream</Styled.h2>
       <ul
@@ -37,7 +34,15 @@ export default props => {
           return (
             <li key={photo}>
               <a href={`${photo}=w${1024}`} target="_blank">
-                <Styled.img src={`${photo}=w${320}`} sx={{width: "100%"}} />
+                <Styled.img
+                  src={`${photo}=w${320}`}
+                  sx={{
+                    width: "100%",
+                    opacity: 0.85,
+                    transition: ".16s",
+                    ":hover": { opacity: 1 }
+                  }}
+                />
               </a>
             </li>
           )
