@@ -4,6 +4,13 @@ import { Link } from "gatsby"
 
 const projects = [
   {
+    id: "kaleidoscope",
+    title: "Kaleidoscope",
+    description:
+      "WebGL experiment to render an animated kaleidoscope",
+    url: "https://kaleidoscope.carlb.dev"
+  },
+  {
     id: "swisher",
     title: "Swisher",
     description:
