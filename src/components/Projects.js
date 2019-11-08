@@ -17,20 +17,20 @@ const projects = [
       "Linkable payments with encrypted details to protect your number and payment information",
     url: "https://swisher.carlb.dev"
   },
-  {
-    id: "b0tt0",
-    title: "b0tt0",
-    description:
-      "Order food and drinks for pickup with built-in queue management and push notifications to stay updated on order changes",
-    url: ""
-  },
-  {
-    id: "pakt",
-    title: "Pakt",
-    description:
-      "Create and share challenges with your friends to increase accountability"
-    // url: "https://pakt.carlb.dev"
-  }
+  // {
+  //   id: "b0tt0",
+  //   title: "b0tt0",
+  //   description:
+  //     "Order food and drinks for pickup with built-in queue management and push notifications to stay updated on order changes",
+  //   url: ""
+  // },
+  // {
+  //   id: "pakt",
+  //   title: "Pakt",
+  //   description:
+  //     "Create and share challenges with your friends to increase accountability"
+  //   // url: "https://pakt.carlb.dev"
+  // }
 ]
 
 export default props => {
