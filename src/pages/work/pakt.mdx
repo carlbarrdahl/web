@@ -1,0 +1,43 @@
+# Pakt
+
+_Create, manage and sign digital contracts using the mobile app BankID_
+
+Pakt is a platform where users can create and share contracts.
+Documents are uniquely identified with a hash of its content to
+ensure everyone signs the same copy and no tampering is done.
+Signing and verification of users identity is done with BankID
+which is the leading electronic identification app in Sweden.
+
+Other services can easily be integrated by specifying webhooks
+that gets triggered when changes occur in the system.
+
+Future improvements could include adding Swish (similar to
+BankID but for sms payments) to add costs to creating documents
+or signatures. Users could also be notified by sms when
+contracts are assigned or new signatures created to connected
+contract.
+
+Some documents might be sensitive to store on central servers.
+In that case something like <a href="https://ipfs.io" target="_blank">ipfs</a> could be used to store the documents and then secure them with
+smart contracts on a blockchain, <a href="https://ethereum.org" target="_blank">Ethereum</a> for instance.
+
+![](https://github.com/carlbarrdahl/web/raw/master/src/assets/pakt/create.png)
+
+Contracts are easily created by dragging a document to upload
+(or browsing) and filling out the details. Start and end date
+for contract validity can be set and participants can be added
+by entering their email.
+
+![](https://github.com/carlbarrdahl/web/raw/master/src/assets/pakt/view.png)
+Documents are embedded to easily be read without need of
+downloading. Future improvements can include templates to
+dynamically generate documents based on data.
+![](https://github.com/carlbarrdahl/web/raw/master/src/assets/pakt/sign.png)
+Sign contract by entering your SSN and open app on mobile. QR
+code can be added for a more secure (and convenient) signing
+experience.
+![](https://github.com/carlbarrdahl/web/raw/master/src/assets/pakt/list.png)
+All users uploaded and signed contracts are listed.
+![](https://github.com/carlbarrdahl/web/raw/master/src/assets/pakt/webhooks.png)
+
+Contract in screenshots from https://plainfreelancecontract.com/
