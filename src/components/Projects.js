@@ -1,29 +1,36 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import { Link } from "gatsby"
+import { jsx, Styled } from "theme-ui";
+import { Link } from "gatsby";
 
 const projects = [
   {
-    id: "kaleidoscope",
-    title: "Kaleidoscope",
+    id: "music-marketplace",
+    title: "Marketplace for music creators",
     description:
-      "WebGL experiment to render an animated kaleidoscope",
-    url: "https://kaleidoscope.carlb.dev"
+      "Teach your techniques, share your samples and presets and monetize your project files ",
+    url: "/work/music-marketplace"
   },
   {
     id: "swisher",
     title: "Swisher",
     description:
       "Linkable payments with encrypted details to protect your number and payment information",
-    url: "https://swisher.carlb.dev"
+    url: "/work/swisher"
   },
+  {
+    id: "b0tt0",
+    title: "b0tt0",
+    description:
+      "Order food and drinks for pickup with built-in queue management and push notifications to stay updated on order changes",
+    url: "/work/botto"
+  }
   // {
-  //   id: "b0tt0",
-  //   title: "b0tt0",
-  //   description:
-  //     "Order food and drinks for pickup with built-in queue management and push notifications to stay updated on order changes",
-  //   url: ""
-  // },
+  //   id: "kaleidoscope",
+  //   title: "Kaleidoscope",
+  //   description: "WebGL experiment to render an animated kaleidoscope",
+  //   url: "https://kaleidoscope.carlb.dev"
+  // }
+
   // {
   //   id: "pakt",
   //   title: "Pakt",
@@ -31,7 +38,7 @@ const projects = [
   //     "Create and share challenges with your friends to increase accountability"
   //   // url: "https://pakt.carlb.dev"
   // }
-]
+];
 
 export default props => {
   return (
@@ -50,14 +57,15 @@ export default props => {
             <Styled.p>{project.description}</Styled.p>
             <Styled.a
               href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
+              // target="_blank"
+              // rel="noopener noreferrer"
             >
-              {project.url}
+              Read more
+              {/* {project.url} */}
             </Styled.a>
           </li>
         ))}
       </ul>
     </section>
-  )
-}
+  );
+};
