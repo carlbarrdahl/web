@@ -1,0 +1,52 @@
+# b0tt0
+
+_An e-commerce platform to manage orders, inventory, queues and payment_
+
+b0tt0 is a platform for food-trucks, cafés, bars, festivals, arenas etc where ordering and payments of products are made online while keeping the customer updated when order is being prepared and ready for pickup.
+Payments are made safely and simple using Stripe and supports credit-cards, Apple Pay, Google Pay and many more. Intelligence and predictive analysis gives insights about popular products, returning customers and when customers tend to visit.
+
+### Problem definition
+
+#### Queues
+
+Especially during rush hours, there's no way to get around having to stand in line to order and pay.
+
+#### Synchronous orders and payments
+
+There has to be a receiver when placing the order and paying for it. Slow downs here affect speed of the queues.
+
+#### To order you have to be there
+
+There is not possible to place your order ahead of time and head out to pick it up when it's ready.
+
+### Suggested user flow
+
+1. Scan QR-code or visit website
+2. Progressive Web App is launched with menu and information about the vendor
+3. Add items to shopping cart and checkout
+4. A payment request dialog is shown with order information and accepted by a tap
+5. Order receipt and estimated time to pickup is displayed
+6. SMS or noticiations keep the customer updated about changes in the order
+
+### Onboarding as a vendor?
+
+1. Register account at https://PLATFORM_URL
+2. Connect Stripe (Registration takes ~10 min if no account exists)
+3. Create products and skus in Stripe dashboard
+4. Import products in dashboard and build menu
+5. Create and print QR-codes and/or embed shop in website or messenger
+
+### Growth strategies
+
+- Create coupons to be spread as links or QR-codes to friends or strangers
+- Integrate with Google Maps and JSON-LD to place orders
+
+## Architecture
+
+#### Vendor flow
+
+![Vendor flow](https://mermaid.ink/img/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gIFZlbmRvci0-PitCYWNrZW5kOiBzaWdudXAgLyBzaWduaW5cbiAgQmFja2VuZC0tPj4tVmVuZG9yOiB0b2tlblxuICBWZW5kb3ItPj4rU3RyaXBlOiBjb25uZWN0XG4gIFN0cmlwZS0tPj4tQmFja2VuZDogYXV0aCBjb2RlXG4gIGxvb3AgbWFuYWdlIGludmVudG9yeVxuICAgIFZlbmRvci0-PlN0cmlwZTogdXBkYXRlIHByb2R1Y3RcbiAgZW5kXG4gIE5vdGUgb3ZlciBWZW5kb3IsU3RyaXBlOiBTdHJpcGUgaXMgYmVpbmcgdXNlZCB0byBtYW5hZ2UgaW52ZW50b3J5LCBwcm9kdWN0cyBhbmQgc2t1c1xuICBWZW5kb3ItPj5CYWNrZW5kOiBpbXBvcnQgcHJvZHVjdHNcbiAgQmFja2VuZC0-PitTdHJpcGU6IGZldGNoIHByb2R1Y3RzXG4gIFN0cmlwZS0tPj4tQmFja2VuZDogcHJvZHVjdHMgcmVzcG9uc2VcbiAgbG9vcCBtYW5hZ2UgbWVudVxuICAgIFZlbmRvci0-PkJhY2tlbmQ6IHVwZGF0ZSBtZW51XG4gIGVuZFxuICBOb3RlIG92ZXIgVmVuZG9yLEJhY2tlbmQ6IERlZmluZSBtZW51IHRvIGJlIHNob3duIGluIHNob3BcbiAgVXNlci0tPj5WZW5kb3I6IGluY29taW5nIG9yZGVyXG4gIGxvb3AgbWFuYWdlIG9yZGVyXG4gICAgVmVuZG9yLS0-PkJhY2tlbmQ6IHB1c2ggb3JkZXJcbiAgZW5kXG4gIE5vdGUgb3ZlciBWZW5kb3IsQmFja2VuZDogT3JkZXIgaXMgcHV0IHRvIGEgcXVldWUgYW5kIHByZXBhcmVkXG4gIFZlbmRvci0-PlVzZXI6IGhhbmQgb3V0IG9yZGVyIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+
+#### User flow
+
+![User flow](https://mermaid.ink/img/eyJjb2RlIjoiXG5zZXF1ZW5jZURpYWdyYW1cbiAgVXNlci0-PitQV0E6IHNjYW4gUVJcbiAgTm90ZSBvdmVyIFVzZXIsUFdBOiBRUiBjb250YWlucyBVUkwgdG8gc3BlY2lmaWMgdmVuZG9yXG4gIFBXQS0-PitCYWNrZW5kOiBmZXRjaCB2ZW5kb3JcbiAgQmFja2VuZC0tPj4tUFdBOiB2ZW5kb3IgcmVzcG9uc2VcbiAgTm90ZSBvdmVyIFVzZXIsQmFja2VuZDogVmVuZG9yIHJlc3BvbnNlIGluY2x1ZGUgbWVudVxuICBsb29wIGJ1aWxkIGNhcnRcbiAgICBQV0EtLT4-UFdBOiB1cGRhdGUgY2FydFxuICAgIE5vdGUgb3ZlciBVc2VyLFBXQTogVXNlciBpbnRlcmFjdHMgd2l0aCBjYXJ0XG4gIGVuZFxuICBQV0EtPj4rQmFja2VuZDogY2hlY2tvdXQgY2FydFxuXHRCYWNrZW5kLT4-K1N0cmlwZTogY3JlYXRlIG9yZGVyXG5cdFN0cmlwZS0tPj4tQmFja2VuZDogb3JkZXIgcmVzcG9uc2VcbiAgQmFja2VuZC0tPj4tUFdBOiBvcmRlclxuICBOb3RlIG92ZXIgVXNlciwgUFdBOiBTdWJzY3JpYmUgdG8gb3JkZXIgdXBkYXRlc1xuICBQV0EtLT4-VXNlcjogc2hvdyBwYXltZW50IHJlcXVlc3RcbiAgVXNlci0-PlBXQTogYXBwcm92ZSBwYXltZW50XG4gIFBXQS0-PitCYWNrZW5kOiBwYXkgb3JkZXJcbiAgQmFja2VuZC0-PitTdHJpcGU6IHBheSBvcmRlclxuICBTdHJpcGUtLT4-LUJhY2tlbmQ6IHBhaWQgb3JkZXIgcmVzcG9uc2VcbiAgQmFja2VuZC0tPj4tUFdBOiBvcmRlciB3aXRoIHBheW1lbnRcbiAgQmFja2VuZC0tPj5Vc2VyOiBvcmRlciB1cGRhdGVzXG4gIE5vdGUgb3ZlciBVc2VyLEJhY2tlbmQ6IE9yZGVyIHN0YXRlczogY3JlYXRlZCB8IHBhaWQgfCBwcmVwYXJpbmcgfCByZWFkeV9mb3JfcGlja3VwXG4gIFVzZXItPj4rVmVuZG9yOiBwaWNrIHVwIG9yZGVyXG4gIFZlbmRvci0tPj4tVXNlcjogb3JkZXJlZCBpdGVtc1xuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
