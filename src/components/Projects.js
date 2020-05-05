@@ -8,28 +8,29 @@ const projects = [
     title: "Marketplace for music creators",
     description:
       "Teach your techniques, share your samples and presets and monetize your project files ",
-    url: "/work/music-marketplace"
+    url: "/work/music-marketplace",
   },
   {
     id: "swisher",
     title: "Swisher",
     description:
       "Linkable payments with encrypted details to protect your number and payment information",
-    url: "/work/swisher"
+    url: "/work/swisher",
   },
   {
     id: "b0tt0",
     title: "b0tt0",
     description:
       "Order food and drinks for pickup with built-in queue management and push notifications to stay updated on order changes",
-    url: "/work/botto"
-  }
-  // {
-  //   id: "kaleidoscope",
-  //   title: "Kaleidoscope",
-  //   description: "WebGL experiment to render an animated kaleidoscope",
-  //   url: "https://kaleidoscope.carlb.dev"
-  // }
+    url: "/work/botto",
+  },
+  {
+    id: "kaleidoscope",
+    title: "Kaleidoscope",
+    description: "Kaleidoscope camera using WebGL",
+    url: "https://kaleidoscope.carlb.dev",
+    external: true,
+  },
 
   // {
   //   id: "pakt",
@@ -40,27 +41,28 @@ const projects = [
   // }
 ];
 
-export default props => {
+export default (props) => {
   return (
     <section sx={{ mb: [4, 6] }}>
       <Styled.h2>Projects</Styled.h2>
       <ul
         sx={{
           display: "grid",
-          gridTemplateColumns: ["repeat(auto-fit, minmax(256px, 1fr))"],
-          variant: "styles.list"
+          gridTemplateColumns: ["repeat(auto-fit, minmax(320px, 1fr))"],
+          gridColumnGap: 16,
+          variant: "styles.list",
         }}
       >
-        {projects.map(project => (
+        {projects.map((project) => (
           <li key={project.id}>
             <Styled.h3>{project.title}</Styled.h3>
             <Styled.p>{project.description}</Styled.p>
             <Styled.a
               href={project.url}
-              // target="_blank"
-              // rel="noopener noreferrer"
+              target={project.external ? "_blank" : "_self"}
+              rel="noopener noreferrer"
             >
-              Read more
+              {project.external ? "Open" : "Read more"}
               {/* {project.url} */}
             </Styled.a>
           </li>
