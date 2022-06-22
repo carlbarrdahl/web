@@ -23,7 +23,7 @@
     "gatsby-plugin-react-axe": "^0.2.2",
     "gatsby-plugin-theme-ui": "^0.2.43",
     "gatsby-source-dev": "^0.1.4",
-    "got": "^9.6.0",
+    "got": "^11.8.5",
     "netlify-lambda": "^1.6.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
